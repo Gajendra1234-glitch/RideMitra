@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RideMitra — Har Ride ka Dost</title>
+  <style>
+    :root{
+      --brand:#0d47a1;      /* Primary (Blue) */
+      --accent:#ff7a00;     /* Accent (Orange) */
+      --ink:#111827;        /* Text */
+      --muted:#6b7280;      /* Secondary text */
+      --bg:#f8fafc;         /* Page bg */
+      --card:#ffffff;       /* Card bg */
+      --radius:18px;
+      --shadow:0 8px 22px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--bg)}
+    .wrap{max-width:1100px;margin:auto;padding:24px}
+    .hero{
+      background:linear-gradient(135deg, rgba(13,71,161,.07), rgba(255,122,0,.07));
+      border-radius:24px;padding:28px 20px;display:grid;gap:12px;align-items:center;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:54px;height:54px;border-radius:14px;background:var(--brand);
+      display:grid;place-items:center;color:#fff;box-shadow:var(--shadow)
+    }
+    .logo svg{width:30px;height:30px;display:block}
+    h1{margin:0;font-size:28px}
+    .tag{color:var(--muted)}
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .btn{
+      appearance:none;border:0;border-radius:999px;padding:12px 18px;
+      background:var(--brand);color:#fff;font-weight:700;cursor:pointer;box-shadow:var(--shadow);text-decoration:none
+    }
+    .btn.outline{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+    /* Buttons grid */
+    .grid{
+      display:grid;gap:12px;margin:18px 0 8px;
+      grid-template-columns:repeat(2,minmax(0,1fr))
+    }
+    @media(min-width:740px){ .grid{grid-template-columns:repeat(4,1fr)} h1{font-size:34px} }
+    .tile{
+      background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);
+      text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;min-height:86px
+    }
+    .tile .ico{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(13,71,161,.08)}
+    .tile b{display:block;font-size:15px}
+    .tile small{color:var(--muted)}
+    /* Sections */
+    section{scroll-margin-top:90px;margin-top:26px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    .list{display:grid;gap:10px}
+    .row{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;background:#f3f4f6;border-radius:12px}
+    .row b{color:#111}
+    .badge{background:rgba(13,71,161,.1);color:var(--brand);padding:2px 8px;border-radius:999px;font-weight:700}
+    /* Sticky WhatsApp */
+    .whatsapp{
+      position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;border-radius:999px;
+      padding:12px 16px;font-weight:800;text-decoration:none;box-shadow:var(--shadow)
+    }
+    footer{color:var(--muted);text-align:center;margin:28px 0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="brand">
+        <div class="logo" aria-label="RideMitra logo">
+          <!-- steering wheel icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"></circle>
+            <circle cx="12" cy="12" r="2.2"></circle>
+            <path d="M3.5 12h6.5m4 0h6.5M7 17l3-3m4 0l3 3M7 7l3 3m4 0l3-3"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>RideMitra</h1>
+          <div class="tag">Har Ride ka Dost • Indore</div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <!-- TODO: apna number daalo ↓ 916265641648 -->
+        <a class="btn" href="https://wa.me/916265641648?text=Hi%20RideMitra%2C%20I%20want%20to%20book%20a%20car%20service%20in%20Indore.">
+          Book on WhatsApp
+        </a>
+        <a class="btn outline" href="#pricing">See Packages</a>
+      </div>
+
+      <!-- BUTTONS GRID (All sections from Home) -->
+      <div class="grid" aria-label="Quick navigation tiles">
+        <a class="tile" href="#services">
+          <span class="ico">🔧</span>
+          <div><b>Services</b><small>Periodic, Repair, Detailing</small></div>
+        </a>
+        <a class="tile" href="#booking">
+          <span class="ico">📅</span>
+          <div><b>Quick Booking</b><small>60-sec request form</small></div>
+        </a>
+        <a class="tile" href="#spares">
+          <span class="ico">🧩</span>
+          <div><b>Genuine Spares</b><small>Doorstep delivery</small></div>
+        </a>
+        <a class="tile" href="#pricing">
+          <span class="ico">💰</span>
+          <div><b>Transparent Prices</b><small>No surprises</small></div>
+        </a>
+        <a class="tile" href="#warranty">
+          <span class="ico">🛡️</span>
+          <div><b>Warranty</b><small>30-day service promise</small></div>
+        </a>
+        <a class="tile" href="#areas">
+          <span class="ico">📍</span>
+          <div><b>Service Areas</b><small>Indore & nearby</small></div>
+        </a>
+        <a class="tile" href="#about">
+          <span class="ico">👨‍🔧</span>
+          <div><b>Why RideMitra?</b><small>Trusted local partners</small></div>
+        </a>
+        <a class="tile" href="#contact">
+          <span class="ico">☎️</span>
+          <div><b>Contact</b><small>Call / WhatsApp / Map</small></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="card">
+      <h2>Services</h2>
+      <div class="list">
+        <div class="row"><span><b>Periodic Service</b> — oil, filters, checks</span><span class="badge">Most Popular</span></div>
+        <div class="row"><span><b>General Repair</b> — brakes, clutch, suspension</span><span>On inspection</span></div>
+        <div class="row"><span><b>AC Service</b> — cooling & gas top-up</span><span>From ₹1,299</span></div>
+        <div class="row"><span><b>Detailing</b> — interior & exterior</span><span>From ₹999</span></div>
+        <div class="row"><span><b>Emergency Assist</b> — jumpstart, puncture</span><span>Call us</span></div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="card">
+      <h2>Quick Booking</h2>
+      <p class="tag">60-second request. Team WhatsApp par confirm karegi.</p>
+      <form onsubmit="return sendWA(event)">
+        <div class="list">
+          <input required placeholder="Full Name" id="name" style="padding:12px;border-radius:12px;border:1px solid #d1d5db">
+          <input required placeholder="Car Model (e.g., Swift 2019)" id="car" style="padding:12px;border-radius:12px;border:1px solid #d1d5db">
+          <input required placeholder="Location in Indore" id="loc" style="padding:12px;border-radius:12px;border:1px solid #d1d5db">
+          <select id="need" style="padding:12px;border-radius:12px;border:1px solid #d1d5db">
+            <option>Periodic Service</option>
+            <option>General Repair</option>
+            <option>AC Service</option>
+            <option>Detailing</option>
+            <option>Emergency Assist</option>
+          </select>
+          <button class="btn" type="submit">Send on WhatsApp</button>
+        </div>
+      </form>
+      <script>
+        // TODO: yaha apna number daalo (sirf digits). Example: 919876543210
+        const WMOBILE = "916265641648";
+        function sendWA(e){
+          e.preventDefault();
+          const n = document.getElementById('name').value.trim();
+          const c = document.getElementById('car').value.trim();
+          const l = document.getElementById('loc').value.trim();
+          const s = document.getElementById('need').value.trim();
+          const msg = Hi RideMitra,%0AName: ${encodeURIComponent(n)}%0ACar: ${encodeURIComponent(c)}%0ALocation: ${encodeURIComponent(l)}%0AService: ${encodeURIComponent(s)};
+          window.open(https://wa.me/${WMOBILE}?text=${msg}, "_blank");
+          return false;
+        }
+      </script>
+    </section>
+
+    <!-- SPARES -->
+    <section id="spares" class="card">
+      <h2>Genuine Spares</h2>
+      <p>OEM/High-quality aftermarket parts with bill. Order karein, hum Siyaganj/Sanwer Road suppliers se same-day arrange kar denge.</p>
+      <div class="list">
+        <div class="row"><span>Air/Oil Filters</span><span>From ₹199</span></div>
+        <div class="row"><span>Brake Pads/Discs</span><span>From ₹799</span></div>
+        <div class="row"><span>Clutch Kit</span><span>From ₹2,499</span></div>
+        <div class="row"><span>AC Components</span><span>Ask</span></div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="card">
+      <h2>Transparent Prices</h2>
+      <div class="list">
+        <div class="row"><span><b>Basic Service</b> — engine oil + filter + checks</span><span>₹1,999*</span></div>
+        <div class="row"><span><b>Standard Service</b> — + cabin/air filter</span><span>₹2,999*</span></div>
+        <div class="row"><span><b>Comprehensive</b> — full inspection + scan</span><span>₹4,499*</span></div>
+      </div>
+      <p class="tag">*Prices may vary by car model • 30-day workmanship warranty</p>
+    </section>
+
+    <!-- WARRANTY -->
+    <section id="warranty" class="card">
+      <h2>Warranty & Trust</h2>
+      <ul>
+        <li>30-day workmanship warranty on services</li>
+        <li>Genuine parts guarantee with bill</li>
+        <li>Live updates on WhatsApp</li>
+      </ul>
+    </section>
+
+    <!-- AREAS -->
+    <section id="areas" class="card">
+      <h2>Service Areas (Indore)</h2>
+      <p>Vijay Nagar • Palasia • AB Road • MR-10 • Rau • Dewas Naka • Bhawarkua • Annapurna • + nearby</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>Why RideMitra?</h2>
+      <p>Local trusted garages + transparent pricing + WhatsApp-first support. Hamara focus: fast turnaround, genuine spares, aur seedha-sa communication.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p><b>Phone/WhatsApp:</b> +91 62656-41648<br>
+         <b>Hours:</b> 9:00 AM – 8:00 PM (All days)<br>
+         <b>City:</b> Indore, MP</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/916265641648?text=Hi%20RideMitra%2C%20Need%20assistance.">WhatsApp Now</a>
+        <a class="btn outline" href="#booking">Book a Slot</a>
+      </div>
+    </section>
+
+    <footer>© <span id="yr"></span> RideMitra • Har Ride ka Dost</footer>
+  </div>
+
+  <!-- Sticky WA CTA -->
+  <a class="whatsapp" href="https://wa.me/916265641648?text=Hi%20RideMitra%2C%20I%20need%20a%20car%20service%20in%20Indore.">WhatsApp</a>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+</body>
+</html><!--HTTPS only...-->
